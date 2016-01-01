@@ -1,7 +1,7 @@
 elasticsearch:
   image: elasticsearch:latest
   command: elasticsearch -Des.network.host=0.0.0.0
-  volumes:
+#  volumes:
 #    - ./elasticsearch/data:/usr/share/elasticsearch/data
 #    - ./elasticsearch/config:/usr/share/elasticsearch/config
   ports:
