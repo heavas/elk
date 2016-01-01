@@ -9,9 +9,10 @@ elasticsearch:
     - "9300:9300"
 logstash:
   image: logstash:latest
-  command: logstash -f /etc/logstash/conf.d/logstash.conf
+#  command: logstash --debug -f /etc/logstash/conf.d/csvimport.conf
   volumes:
     - ./logstash/config:/etc/logstash/conf.d
+    - ./logstash/data:/etc/logstash/data
   ports:
     - "5000:5000"
   links:
