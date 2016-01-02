@@ -10,8 +10,8 @@ elasticsearch:
 logstash:
   image: logstash:latest
 #  command: logstash --debug -f /etc/logstash/conf.d/csvimport.conf
-  command: /bin/bash
-
+  command: logstash -f /etc/logstash/conf.d/logstash.conf
+#  command: /bin/bash
   volumes:
     - ./logstash/config:/etc/logstash/conf.d
     - ./logstash/data:/etc/logstash/data
